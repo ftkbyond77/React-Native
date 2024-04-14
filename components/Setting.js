@@ -3,9 +3,12 @@ import { ScrollView,  View, Image, Text, TouchableOpacity } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 import { createStackNavigator } from "@react-navigation/stack";
+import { useNavigation } from "@react-navigation/native";
 const Stack = createStackNavigator();
 
+
 export default function Setting() {
+    const navigation = useNavigation();
     return (
         <ScrollView>
             <View style={{flex: 1}}>
@@ -22,7 +25,7 @@ export default function Setting() {
             <View style={{flexDirection: "row", padding: 10, justifyContent: "space-around"}}>
                 <Text>______________________________________________________________</Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{ navigation.navigate("Profile"); }}>
             <View style={{flexDirection: "row", padding: 10, justifyContent: "flex-start"}}>
                     <Text style={{fontSize:17, color:"gray"}}>Profile</Text>
                     <FontAwesome name="code" size={20} color="gray" style={{ marginLeft: 320 }} />
@@ -40,7 +43,7 @@ export default function Setting() {
             <View style={{flexDirection: "row", padding: 10, justifyContent: "space-around"}}>
                 <Text>______________________________________________________________</Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{ navigation.navigate("FeedBack02"); }}>
             <View style={{flexDirection: "row", padding: 10, justifyContent: "flex-start"}}>
                     <Text style={{fontSize:17, color:"gray"}}>Feedback</Text>
                     <FontAwesome name="code" size={20} color="gray" style={{ marginLeft: 300 }} />
@@ -58,7 +61,7 @@ export default function Setting() {
             <View style={{flexDirection: "row", padding: 10, justifyContent: "space-around"}}>
                 <Text>______________________________________________________________</Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{ navigation.navigate("Logout"); }}>
             <View style={{ backgroundColor: "steelblue", width: 300, height: 60, borderRadius: 10, alignSelf: "center" , padding:10, marginTop:100, shadowOpacity: 0.50, shadowRadius: 3.84, elevation: 5,}}>
                     <Text style={{fontSize:20, color:"snow", alignSelf:"center", marginTop:7}}>Log Out</Text>
                 </View>

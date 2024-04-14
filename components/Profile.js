@@ -3,9 +3,12 @@ import { ScrollView,  View, Image, Text, TouchableOpacity } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 import { createStackNavigator } from "@react-navigation/stack";
+import { useNavigation } from "@react-navigation/native";
 const Stack = createStackNavigator();
 
 export default function Profile() {
+    const navigation = useNavigation();
+
     return (
         <ScrollView>
             <View style={{flex: 1}}>
@@ -31,7 +34,7 @@ export default function Profile() {
             <View style={{flexDirection: "row", padding: 10, justifyContent: "space-around"}}>
                 <Text>______________________________________________________________</Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{ navigation.navigate("Payment"); }}>
             <View style={{flexDirection: "row", padding: 10, justifyContent: "flex-start", opacity:0.7}}>
                 <FontAwesome name="cubes" size={30} color="steelblue" />
                 <Text style={{fontSize:18, paddingLeft:-160}}>   Subscriptions!</Text>
@@ -55,7 +58,7 @@ export default function Profile() {
                 <Text style={{fontSize:18, paddingLeft:-160}}>      Contact us</Text>
             </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{ navigation.navigate("Setting"); }}>
             <View style={{flexDirection: "row", padding: 10, justifyContent: "flex-start", opacity:0.7}}>
                 <FontAwesome name="bars" size={30} color="steelblue" />
                 <Text style={{fontSize:18, paddingLeft:-160}}>      Setting</Text>
