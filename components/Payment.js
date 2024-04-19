@@ -3,16 +3,19 @@ import { ScrollView,  View, Image, Text, TouchableOpacity } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 import { createStackNavigator } from "@react-navigation/stack";
+import { useNavigation } from "@react-navigation/native";
 const Stack = createStackNavigator();
 
 export default function Payment() {
+    const navigation = useNavigation();
+    
     return (
         <ScrollView>
             <View style={{flex: 1}}>
                 <View style={{ backgroundColor: "steelblue", width: 350, height: 100, borderRadius: 10, alignSelf: "center" , padding:10, marginTop:20, shadowOpacity: 0.50, shadowRadius: 3.84, elevation: 5,}}>
                     <Text style={{fontSize:17, color:"snow"}}>FWater Credit (bath)</Text>
                     <Text style={{fontSize:23, color:"snow", padding:15}}>87.00</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{ navigation.navigate("Topup"); }}>
                     <View style={{backgroundColor: "snow", width:100, height:50, borderRadius: 10, alignSelf:"flex-end", marginTop: -50}}>
                         <Text style={{fontSize:17, color:"steelblue", alignSelf:"center", padding:12}}>Top up!</Text>
                     </View>

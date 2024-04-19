@@ -8,6 +8,7 @@ import Setting from "../components/Setting";
 import Gift from "../components/Gift";
 import FeedBack02 from "../components/FeedBack02";
 import Logout from "../components/Logout";
+import Topup from "../components/Topup";
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ export default function ProjectStack() {
       <Stack.Screen name="Gift" component={Gift} options={{ title: "Invite Friends" }} />
       <Stack.Screen name="FeedBack02" component={FeedBack02} options={{ title: "FeedBack 2.0"}} />
       <Stack.Screen name="Logout" component={Logout} options={{ title: false}} />
+      <Stack.Screen name="Topup" component={Topup} options={{ title: "Top up"}} />
     </Stack.Navigator>
 
   );
