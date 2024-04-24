@@ -9,6 +9,9 @@ import Gift from "../components/Gift";
 import FeedBack02 from "../components/FeedBack02";
 import Logout from "../components/Logout";
 import Topup from "../components/Topup";
+import Community from "../components/Community";
+import Contact from "../components/Contact";
+import Reward from "../components/Reward";
 
 const Stack = createStackNavigator();
 
@@ -24,6 +27,9 @@ export default function ProjectStack() {
       <Stack.Screen name="FeedBack02" component={FeedBack02} options={{ title: "FeedBack 2.0"}} />
       <Stack.Screen name="Logout" component={Logout} options={{ title: false}} />
       <Stack.Screen name="Topup" component={Topup} options={{ title: "Top up"}} />
+      <Stack.Screen name="Community" component={Community} options={{ title: "Community"}} />
+      <Stack.Screen name="Contact" component={Contact} options={{ title: "Contact Us"}} />
+      <Stack.Screen name="Reward" component={Reward} options={{ title: "Rewards"}} />
     </Stack.Navigator>
 
   );

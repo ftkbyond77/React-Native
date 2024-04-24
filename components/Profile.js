@@ -40,19 +40,19 @@ export default function Profile() {
                 <Text style={{fontSize:18, paddingLeft:-160}}>   Subscriptions!</Text>
             </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{ navigation.navigate("Reward"); }}>
             <View style={{flexDirection: "row", padding: 10, justifyContent: "flex-start", opacity:0.7}}>
                 <FontAwesome name="gift" size={30} color="steelblue" />
                 <Text style={{fontSize:18, paddingLeft:-160}}>      Rewards</Text>
             </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{ navigation.navigate("Community"); }}>
             <View style={{flexDirection: "row", padding: 10, justifyContent: "flex-start", opacity:0.7}}>
                 <FontAwesome name="code" size={30} color="steelblue" />
                 <Text style={{fontSize:18, paddingLeft:-160}}>    Community</Text>
             </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{ navigation.navigate("Contact"); }}>
             <View style={{flexDirection: "row", padding: 10, justifyContent: "flex-start", opacity:0.7}}>
                 <FontAwesome name="phone" size={30} color="steelblue"  />
                 <Text style={{fontSize:18, paddingLeft:-160}}>      Contact us</Text>
